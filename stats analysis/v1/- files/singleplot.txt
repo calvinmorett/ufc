@@ -1,0 +1,123 @@
+############### this is basically a recall / search function for our csv file - containing a roster of active and inactive ufc fighters and stats. 
+############### use their names, in this case Calvin Katter, at index 1526 to display their row of stats.
+############### now lets use this functionality to pull in two fighters and bring their stats vs each other.
+ 
+import csv
+import matplotlib.pyplot as plt
+
+fighterID_one = input('Fighter Name:  ').title()
+print("")
+
+#stats check
+print('---------------------')
+def find_index(input): 
+    o = open('purestats2.csv', 'r') 
+    ufcroster = csv.reader(o) 
+    index = 0 
+    for row in ufcroster:
+      #print row
+      if row[1] == input: 
+        return index 
+      else : index+=1
+
+f1 = find_index(fighterID_one)
+
+file = open("purestats2.csv")
+reader = csv.reader(file)
+
+# Iterate over ufc roster
+roster = []
+for row in reader:
+    roster.append(row)
+
+indexloop = 3
+header = roster[0][indexloop]
+
+statheaders = []
+fstatlist = []
+def statcomp():
+  statheaders.append(csvheader)
+  fstatlist.append(f)
+
+# Defining the `calc_height` variable.
+def calc_height(raw_height):
+# Calculates height from feet-inches to inches
+  height_components = raw_height.split("-")
+  n_feet = int(height_components[0])
+  n_inches = int(height_components[1])
+
+  return (n_feet * 12) + n_inches
+
+#skip stance and dob
+while indexloop <= 15:
+  if indexloop == 3:
+    f1h = calc_height(roster[f1][indexloop])
+    f = str(f1h)
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 4:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 5:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 8:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 9:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 10:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 11:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 12:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 13:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 14:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+  if indexloop == 15:
+    f = roster[f1][indexloop]
+    csvheader = roster[0][indexloop]
+    statcomp()
+    statlabels = [x.strip('"') for x in statheaders]
+    statplot = [b.strip('"') for b in fstatlist]
+    statplot = [b.strip('%') for b in statplot]
+    statplot = [int(float(k)) for k in statplot]
+    print(statlabels,statplot)
+  indexloop += 1
+
+
+fig1, ax1 = plt.subplots()
+ax1.pie(statplot, labels=statlabels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
+  
+  
+  
+############### Search function for our csv file - containing a roster of active and inactive ufc fighters and stats. 
+############### use their names, in this case Calvin Katter, at index 1526 to display their row of stats.
+############### now lets use this functionality to pull in two fighters and bring their stats vs each other.
+
+# ['cap-date', 'name', 'record', 'height', 'weight', 'reach', 'stance', 'dob', 'slpm', 'stracc', 'sapm', 'strdef', 'tdavg', 'tdacc', 'tddef', 'subavg', '']
+#       0         1       2         3         4         5         6      7       8        9        10       11        12      13       14        15
+
+
+
