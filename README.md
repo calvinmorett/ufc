@@ -1,6 +1,6 @@
 # Setup/Start
-- place files in the same dir.
-- load gitbash or your terminal preference.
+- open finals folder or place files in the same dir.
+- load terminal preference.
 - call the python files. e.g. py averageplot.py
 
 # Data Analysis Checklist 7/2020
