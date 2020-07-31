@@ -1,7 +1,7 @@
-# UFC Data Analysi and Visualizations
+# UFC Data Analysis and Visualizations
 # Albany Can Code 2020
 
-You can find the slides to this project, explaining the code here: https://docs.google.com/presentation/d/1yZv149k2ynDXc6b0tp4wiB90qrMkjxJIRNe-FXgNZ4g/edit#slide=id.g8ed1dd480f_0_12
+You can find the slides to this project, explaining the code here: https://docs.google.com/presentation/d/1yZv149k2ynDXc6b0tp4wiB90qrMkjxJIRNe-FXgNZ4g
 
 # Setup/Start
 - open finals folder or place files in the same dir.
