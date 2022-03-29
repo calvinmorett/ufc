@@ -24,5 +24,4 @@ http://ufcstats.com/fighter-details/0aa74d04c196800c
 http://ufcstats.com/fighter-details/3ecd936bd8814108
 http://ufcstats.com/fighter-details/108afe61a26bcbf4
 http://ufcstats.com/fighter-details/be124bdd60fab7d5
-http://ufcstats.com/statistics/fighters?char=z
 http://ufcstats.com/statistics/fighters?char=z&page=all
